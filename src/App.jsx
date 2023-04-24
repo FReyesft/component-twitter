@@ -7,7 +7,7 @@ export default function App() {
       id: 1,
       name: "Fernando",
       username: "freyes",
-      avatar: "https://avatars.githubusercontent.com/u/45678?v=4",
+      avatar: "https://avatars.githubusercontent.com/u/4789?v=4",
     },
     {
       id: 2,
@@ -21,9 +21,16 @@ export default function App() {
       username: "dois_15",
       avatar: `https://avatars.githubusercontent.com/u/123671?v=4`,
     },
+    {
+      id: 4,
+      name: "Maicol",
+      username: "maicolito",
+      avatar: "https://avatars.githubusercontent.com/u/1568?v=4",
+    }
   ];
   return (
-    <>
+    <div className="container">
+    <h1>A quién seguir</h1>
       {users.map((user) => {
         const { name, username, avatar, isFollowing, id } = user;
         return (
@@ -36,6 +43,6 @@ export default function App() {
           ></TwitterFollowCard>
         );
       })}
-    </>
+    </div>
   );
 }
